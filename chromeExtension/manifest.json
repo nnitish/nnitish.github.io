@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Sms Plugin",
+  "description": "This extension will send sms by using api with free signup",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"], // wild card
+        "css": ["css/style.css"],
+        "js": ["js/pop-up.js"]
+    }]
+}
